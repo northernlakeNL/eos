@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+dt=$(date '+%d%m%Y-%H%M%S');	#zoek de datum en tijd
+for file in $1*.*; #voor elke bestand in de meegegeven directory
+do
+	$2 $file >> $dt$3.txt #voer commando uit op het bestand en plaats de output in een nieuwe txt file (append)
+done

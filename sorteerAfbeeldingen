@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+mkdir finalCopy 			#maak een nieuwe directory (als deze nog niet bestaat)
+cd /home/Northie/v1eos-practica/shell
+cp */*.jpg ~/Documents/eos/finalCopy/	#plaats elke jpg in de de directory naar de nieuwe directory
+cp */*.png ~/Documents/eos/finalCopy/	#kopieer elke png in de directory naar de nieuwe directory

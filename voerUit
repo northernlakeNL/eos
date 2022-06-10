@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+case $1 in			#$1 is het eerste argument na de bashfile
+	*.py)		#als het bestand een .py is
+		python $1	#voer het uit in Python
+		;;	#eindigt het commando	
+	*.sh)		#bestand een bash
+		bash $1		#voer bash uit
+		;;
+	*.cc)		#cat bestand
+		cat $1		#voer cat uit
+		;;
+	*)
+		echo "Not usable"	#print not usable want de extension zit niet in dit bestand
+		;;
+esac	#eindig de case

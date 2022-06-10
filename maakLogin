@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+uname=$(whoami)		#pak de username
+read -s pw1		#vraag wachtwoord 1 op zonder te laten zien
+read -s pw2		#vraag wachtwoord 2 op zonder te laten zien
+while [ "$pw1" != "$pw2" ]	#check of pw1 en pw2 ongelijk zijn, als waar is blijf vragen om een wachtwoord
+do
+	echo "Password not the same!"
+	echo "Password: "
+	read -s pw1
+	echo "Password again: "
+	read -s pw2
+done
+echo "$1"	#neem het eerste pad wat bijgevoegd is in het commando
+if [ "$pw1" == "$pw2" ]		#dubbel checken of pw1 en pw2 gelijk zijn
+	then
+		hash="$(echo -n "$pw1" | md5sum )"	#maak het wachtwoord een has
+		echo "$uname $hash" > $1 #plaats in het bestand
+fi
+echo "done"

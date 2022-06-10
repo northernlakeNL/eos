@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+echo "your question please"
+read question		#de vraag opslaan
+if [ "$question" != "" ] #checken of er een vraag gesteld is
+then
+	RNG=$[ RANDOM%8+1 ]	#een random nummer tussen 1 en 8 maken
+	echo "The awnser to your question is:"
+	# outputs per nummer
+	if [ "$RNG" == "1" ]
+	then
+		echo "it is certain"
+	fi
+	if [ "$RNG" == "2" ]
+	then
+		echo "The outcome will be good"
+	fi
+	if [ "$RNG" == "3" ]
+	then
+        	echo "you may rely on it"
+	fi
+	if [ "$RNG" == "4" ]
+	then
+        	echo "Ask again later"
+	fi
+	if [ "$RNG" == "5" ]
+	then
+        	echo "Concentrate and ask again"
+	fi
+	if [ "$RNG" == "6" ]
+	then
+        	echo "probably not"
+	fi
+	if [ "$RNG" == "7" ]
+	then
+        	echo "Do not expect anything"
+	fi
+	if [ "$RNG" == "8" ]
+	then
+        	echo "I doubt it"
+	fi
+else #in het geval er geen vraag is gesteld
+	echo "please reconsider asking"
+fi

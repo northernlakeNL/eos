@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+cd $1
+for image in $1*."jpg";		#zoek elke jpg in een directory
+	do
+		convert ${image##*/} -resize 128x128 ${image%.*}.png #resize naar 128x128 en ze om naar png bestand	
+done
